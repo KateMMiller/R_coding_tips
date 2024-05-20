@@ -508,7 +508,8 @@ table(wdat1c$park)</code></pre>
 <p class="fxn">
 With pipes:
 </p>
-<p>The entire process can be done with 1 named object and 2 pipes.</p>
+<p>The entire process can be done with 1 named object and 2 pipes, and
+the steps taken are pretty easy to follow, even if you don’t know R.</p>
 <pre class="r"><code>wdat2 &lt;- getSondeInSitu(park = &quot;LNETN&quot;, years = 2023, parameter = &quot;pH&quot;) |&gt; 
            filter(UnitCode != &quot;SAIR&quot;) |&gt; 
            select(SiteCode, park = UnitCode, year, month, param, value) </code></pre>
@@ -548,13 +549,14 @@ group_by() to then summarize by the grouping columns. Different from
 mutate(), the summarize() function always returns fewer rows than the
 original data frame.
 </li>
-</li>
-b class = ‘fxn’&gt;the join family</b>: dplyr includes joins like
+<li>
+<b class="fxn">the join family</b>: dplyr includes joins like
 left_join, right_join, full_join, and inner_join to specify how to
 combine two datasets. This forces you to think about how you’re joining
 the data. In contrast, by default MS Access uses inner joins unless you
 change them manually. Using an inner join means that only rows that have
 a match on both datasets are carried into the resulting dataset.
+</li>
 </ul>
 <br>
 <h4>

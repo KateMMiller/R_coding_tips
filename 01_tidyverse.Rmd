@@ -69,7 +69,7 @@ names(wdat1c)
 ```
 <br>
 <p class = 'fxn'>With pipes:</p>
-The entire process can be done with 1 named object and 2 pipes.
+The entire process can be done with 1 named object and 2 pipes, and the steps taken are pretty easy to follow, even if you don't know R.
 ```{r}
 wdat2 <- getSondeInSitu(park = "LNETN", years = 2023, parameter = "pH") |> 
            filter(UnitCode != "SAIR") |> 
@@ -88,7 +88,7 @@ The <b class = 'fxn'>dplyr</b> package does a lot of the heavy lifting for data 
 <li><b class = 'fxn'>arrange</b>: Orders/sorts by named columns </li>
 <li><b class = 'fxn'>group_by</b>: Allows you to group by one or more columns, like park and year. </li>
 <li><b class = 'fxn'>summarize</b>: This function goes hand in hand with group_by() to then summarize by the grouping columns. Different from mutate(), the summarize() function always returns fewer rows than the original data frame.</li>
-</li>b class = 'fxn'>the join family</b>: dplyr includes joins like left_join, right_join, full_join, and inner_join to specify how to combine two datasets. This forces you to think about how you're joining the data. In contrast, by default MS Access uses inner joins unless you change them manually. Using an inner join means that only rows that have a match on both datasets are carried into the resulting dataset. 
+<li><b class = 'fxn'>the join family</b>: dplyr includes joins like left_join, right_join, full_join, and inner_join to specify how to combine two datasets. This forces you to think about how you're joining the data. In contrast, by default MS Access uses inner joins unless you change them manually. Using an inner join means that only rows that have a match on both datasets are carried into the resulting dataset.</li> 
 </ul>
 <br>
 <h4><b>dplyr in action</h4></b>
