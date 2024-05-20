@@ -1,0 +1,31 @@
+---
+title: "R coding tips"
+output: html_document
+---
+```{css echo = F}
+.title{
+ display:none;
+}
+
+.fxn{
+  color:#1942B5;
+  font-size:14px;
+  font-weight: bold;
+}
+
+
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Coding Tips {.tabset .tabset-pills}
+
+### tidyverse {.tabset}
+```{r tidyverse, child = "01_tidyverse.RMD"}
+```
+
+### ggplot2 {.tabset}
+```{r tidyverse, child = "02_ggplot2.RMD"}
+```
