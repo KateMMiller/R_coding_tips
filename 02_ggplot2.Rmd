@@ -3,7 +3,11 @@ output: html_document
 ---
 
 #### Intro
+Coming soon
 
 #### Basic plotting
+Coming soon
 
 #### Advanced plotting
+Coming soon
+
