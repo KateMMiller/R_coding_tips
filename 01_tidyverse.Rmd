@@ -3,7 +3,7 @@ output: html_document
 ---
 
 #### Intro {.tabset}
-<h4><b>Why I like the tidyverse</h4></b>
+<h3><b>Why I like the tidyverse</h3></b>
 <ol>
 <li>Data are organized in a tidy way, such that observations are rows and variables are columns.</li>
 <li>All functions within the tidyverse start with data as the first argument, allowing you to chain functions together via the pipe operator. </li>
@@ -13,7 +13,7 @@ output: html_document
 </ol>
 <br>
 
-<h4><b>A tail of two pipes</b></h4>
+<h3><b>A tail of two pipes</b></h3>
 <ul>
 <li><b class = 'fxn'>%>%</b> was the original pipe operator was part of the `magrittr` package, which also was inherited in `dplyr`. To use the %>%, you had to load either of those packages (or `tidyverse`).</li>
 <li><b class = 'fxn'>|></b> is the base R operator, that is installed with R. This became available with R 4.0, and is supposed to perform faster than the %>%. There are some slight differences between the two, but in general, you won't notice the difference. I prefer the base pipe (|>) because you don't need to load any packages to use. </li>
@@ -35,7 +35,7 @@ knitr::include_graphics("./images/native_pipe.jpg")
 </br>
 
 #### Pipe Demo 
-<h4><b>Background</b></h4>
+<h3><b>Background</b></h3>
 To see what piping looks like, we'll first load the libraries and import the data. Note that you don't need to load the `tidyverse` to use the base R pipe, but I frequently use packages within `tidyverse` when I'm coding, so I often load it all in one, rather than each individual package. In contrast, when building functions in packages, it's best to only load packages you need and use base R as much as possible. Base R what comes in as part of the installation of R, and doesn't require you to load any packages to use.  
 
 <p class = "fxn">Load or package and import data.</p>
@@ -51,7 +51,7 @@ library(tidyverse)
 ```
 <br>
 
-<h4><b>How piping works:</b></h4>
+<h3><b>How piping works:</b></h3>
 <p class = 'fxn'>Without pipes:</p>
 Say we want to get pH for lower NETN, drop SAIR, and only include SiteCode, park, year, month, param and value columns. Without pipes, every step has a different output and code takes a second to follow.
 ```{r}
@@ -79,7 +79,7 @@ wdat2 <- getSondeInSitu(park = "LNETN", years = 2023, parameter = "pH") |>
 
 
 #### Ode to dplyr and other packages 
-<h4><b>dplyr functions</b></h4>
+<h3><b>dplyr functions</b></h3>
 The <b class = 'fxn'>dplyr</b> package does a lot of the heavy lifting for data wrangling. The functions I use most often are:
 <ul>
 <li><b class = 'fxn'>filter</b>: Removes rows based on specified condition. Therefore, it makes a data frame smaller.</li>
@@ -91,7 +91,7 @@ The <b class = 'fxn'>dplyr</b> package does a lot of the heavy lifting for data 
 <li><b class = 'fxn'>the join family</b>: dplyr includes joins like left_join, right_join, full_join, and inner_join to specify how to combine two datasets. This forces you to think about how you're joining the data. In contrast, by default MS Access uses inner joins unless you change them manually. Using an inner join means that only rows that have a match on both datasets are carried into the resulting dataset.</li> 
 </ul>
 <br>
-<h4><b>dplyr in action</h4></b>
+<h3><b>dplyr in action</h3></b>
 The code below takes daily climate data from Daymet, calculates a new column that's an average of the min and max temperatures (Daymet doesn't provide average daily temperature). Next, the data are grouped by site, year, and month, then the summarize function helps us calculate the means for each of the metrics of interest. 
 ```{r}
 # Get daily climate data
@@ -110,7 +110,7 @@ temp2 <- temp |>
 
 ```
 <br>
-<h4><b>Other packages I frequently use are:</b></h4>
+<h3><b>Other packages I frequently use are:</b></h3>
 <ul>
 <li><b class = 'fxn'>tidyr</b>: for reshaping datasets from long to wide and vise versa (e.g., pivot_wider() and pivot_longer()). </li>
 <li><b class = 'fxn'>lubridate</b>: for working with time and date columns. </li>

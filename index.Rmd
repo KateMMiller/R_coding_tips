@@ -1,6 +1,8 @@
 ---
 title: "R coding tips"
-output: html_document
+output: 
+    html_document:
+      css: custom_styles.css
 ---
 ```{css echo = F}
 .title{
@@ -35,6 +37,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r tidyverse, child = "01_tidyverse.RMD"}
 ```
 
-### ggplot2 {.tabset}
+### Data Viz and ggplot2 {.tabset}
 ```{r tidyverse, child = "02_ggplot2.RMD"}
 ```
